@@ -1,0 +1,24 @@
+body{
+    margin: 10px;
+}
+
+.wrapper {
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+#addTaskBtn {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 10px!important;
+}
+
+.err-text{
+    color: red !important;;
+}
+
+.hide {
+    display: none;
+}

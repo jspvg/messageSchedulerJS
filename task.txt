@@ -1,0 +1,85 @@
+U ovom zadatku praviti cemo Message Scheduler aplikaciju. Aplikacija ima za cilj kreiranje razlicitih poruka koje se trebaju prikazati nakon x vremena.
+
+Sta je scheduled message? Predstavlja prikaz odredjene poruke za odredjeno vrijeme. Npr za 1h 10min i 50 sec prikazi poruku `Kraj casa!`.
+
+U prilogu imate kako sve treba izgledati na kraju.
+
+Implementirati slijedece:
+
+1. Ucitati detalje o porukama (u nastavku: scheduled messages) u tabelu:
+- U `script.js` primjetiti cete niz `scheduledMessages`.Svaki clan niza predstavlja poruku koju treba odgoditi (schedule) i prikazati u tacno odredjeno vrijeme
+- U `index.html` primjetiti cete tabelu. Sve poruke iz niza ucitati u tabelu sa odgovarajucim podacima.
+- Uz svaku poruku, u redu `Action` prikazati dva buttona: `Start` i `Delete`
+
+
+2. Implementirati otvaranje i zatvranje modala za dodavanje nove scheduled mesage u listu:
+- U `index.html` primjetiti cete dugme sa id-em `addScheduledMessageBtn`
+- Klikom na ovo dugme, treba da se otvori modal sa id-em `addModal`
+- Klikom na dugme zatvori na `addModal` modalu, modal treba da se zatvori
+- Da bi se modal prikazao potrebno mu je dodati klasu `show` i `display:block`. I obratno da bismo ga sakrili potrebno je klasu `show` ukloniti i setovati `display:none`.
+- Dakle, u ovom koraku trebate implementirati jednostavno otvaranje i zatvaranje modala.
+
+3. Implementirati dodavanje nove scheduled mesage u listu:
+- Kada se modal otvorio, omoguciti korisniku da unosi podatke u formu
+- Sva su polja obavezna
+- Klikom na dugme `Save` treba da se spremi scheduled message u niz i da se lista osvjezi
+- Id poruke treba biti random generiran
+- Voditi racuna da hours, minutes and seconds have to be a number
+- Implementirati validaciju na formi
+
+4. Implementirati brisanje poruke:
+- Odabirom opcije `Delete` treba da se obrise poruka u odgovarajucem redu
+
+5. Implementirati `Start` opciju:
+- Odabirom opcije `Start` treba da se pokrene timer countdown za tu poruku
+- Nakon x sati, x minuta i x sekundi treba da se na ekranu u vidu alerta prikaze message za odabranu poruku (pogledati setTimeout JS metodu)
+- Nakon sto se poruka prikaze, istu je potrebni izbrisati
+
+Za dodatnu vjezbu:
+- Kao dodatno za ovaj zadatak mozete implementirati pohranu podataka o schedules messages kroz local storage, tako da i kada se app refresha - ostanu svi podaci.
+- Implementirati edit svake poruke.
+- Na formi za dodavanje poruke, dodati checkbox `Ponovi` koji omogucava da se poruka iznova ponavlja svako x vremena.
+
+//English translation
+
+In this task, we will create a Message Scheduler application. The application aims to create different messages that should be displayed after x time.
+
+What is a scheduled message? It represents the display of a certain message for a certain time. For example, in 1 hour 10 minutes and 50 seconds, display the message ``End of time!''
+
+Attached is how everything should look at the end.
+
+Implement the following:
+
+1. Load details about messages (hereinafter: scheduled messages) into the table:
+- In `script.js` you will notice a series of `scheduledMessages`. Each member of the series represents a message that should be postponed (scheduled) and displayed at a specific time
+- In `index.html` you will notice a table. Load all the messages from the sequence into the table with the appropriate data.
+- With each message, in the `Action' row, display two buttons: `Start' and `Delete'
+
+
+2. Implement the opening and closing of the modal for adding a new scheduled message to the list:
+- In `index.html` you will notice a button with the id `addScheduledMessageBtn`
+- By clicking this button, a modal with the id `addModal` should be opened
+- Clicking the close button on the `addModal` modal should close the modal
+- In order for the modal to be displayed, it is necessary to add the class `show` and `display:block`. And vice versa, in order to hide it, it is necessary to remove the `show` class and set `display:none`.
+- So in this step you need to implement a simple opening and closing of the modal.
+
+3. Implement adding a new scheduled message to the list:
+- When the modal has opened, allow the user to enter data into the form
+- All fields are mandatory
+- By clicking on the `Save' button, the scheduled message should be saved in a sequence and the list should be refreshed
+- The message id should be randomly generated
+- Keep in mind that hours, minutes and seconds have to be a number
+- Implement form validation
+
+4. Implement message deletion:
+- Selecting the ``Delete'' option should delete the message in the appropriate line
+
+5. Implement ``Start'' option:
+- Selecting the ``Start'' option should start the timer countdown for that message
+- After x hours, x minutes and x seconds, a message for the selected message should be displayed on the screen as an alert (see setTimeout JS method)
+- After the message is displayed, it must be deleted
+
+For extra practice:
+- In addition to this task, you can implement data storage of schedules messages through local storage, so that even when the app is refreshed - all data remains.
+- Implement the edit of each message.
+- On the form for adding a message, add a `Repeat' checkbox that enables the message to be repeated every x amount of time.
